@@ -1,0 +1,15 @@
+@mixin mq($size) {
+  $finalSize: $size + px;
+  @media only screen and (max-width: $finalSize) {
+    @content;
+  }
+}
+
+@mixin scaleAnimation {
+  transition: 0.3s;
+  transition-timing-function: cubic-bezier(0.2, 1, 0.2, 1.4);
+
+  &:not(:disabled):hover {
+    transform: scale(1.1);
+  }
+}

@@ -1,0 +1,44 @@
+@import "../../../Mixins.scss";
+
+.home-hero {
+  max-width: 640px;
+  margin-inline: auto;
+  padding-top: 32px;
+  padding-bottom: 120px;
+
+  .honey {
+    margin-inline: auto;
+  }
+
+  .title {
+    font-family: var(--sf-pro-rounded-bold);
+    font-size: 75px;
+    line-height: 1.1333;
+    color: #272d31;
+    text-align: center;
+    margin-top: 32px;
+
+    .greenish {
+      background: linear-gradient(to right, #0f9b81, #288ed2);
+    }
+
+    .blueish {
+      background: linear-gradient(to right, #288ed2, #d12a89);
+    }
+
+    .greenish,
+    .blueish {
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+  }
+
+  .intro {
+    font-size: 24px;
+    line-height: 1.4;
+    color: #576773;
+    margin-top: 32px;
+    margin-bottom: 48px;
+  }
+}

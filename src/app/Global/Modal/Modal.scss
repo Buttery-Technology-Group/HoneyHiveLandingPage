@@ -1,0 +1,52 @@
+@import "../../../Mixins.scss";
+
+.modal-container {
+  height: 100dvh;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 3;
+  display: none;
+  place-items: center;
+  padding: 28px;
+
+  &.active {
+    display: grid;
+
+    .modal {
+      animation: modal 0.3s forwards ease-out;
+    }
+  }
+}
+
+.modal {
+  background: #ffd74d;
+  width: 100%;
+  max-width: 700px;
+  padding: 80px;
+  border-radius: 32px;
+  position: relative;
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.32);
+}
+
+@keyframes modal {
+  from {
+    opacity: 0;
+    transform: translate3d(0, -50px, 0);
+  }
+
+  to {
+    opacity: 1;
+    transform: initial;
+  }
+}
+
+.modal-title {
+  font-family: var(--sf-pro-rounded-bold);
+  font-size: 24px;
+  color: #393939;
+  text-align: center;
+  margin-bottom: 20px;
+}

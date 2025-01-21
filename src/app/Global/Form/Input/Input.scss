@@ -1,0 +1,39 @@
+@import "../../../../Mixins.scss";
+
+.input-wrapper {
+  width: 100%;
+  position: relative;
+}
+
+.input {
+  width: 100%;
+  padding: 16px;
+  border-radius: 99px;
+  background-color: #fff;
+  color: #47545d;
+  font-size: 16px;
+  transition: 0.2s;
+
+  &:hover,
+  &:focus {
+    outline: none;
+  }
+
+  &::placeholder {
+    font-size: inherit;
+    color: #dedede;
+  }
+}
+
+.input-error {
+  position: absolute;
+  left: 16px;
+  bottom: -40%;
+  font-size: 12px;
+  color: #d12a89;
+
+  @include mq(999) {
+    bottom: -30%;
+    font-size: 11px;
+  }
+}

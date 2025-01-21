@@ -1,0 +1,38 @@
+@import "../../../Mixins.scss";
+
+.home-screenshots {
+  padding-block: 96px;
+  max-width: 1684px;
+  margin-inline: auto;
+  display: flex;
+  justify-content: space-between;
+  gap: 32px;
+
+  .title {
+    padding-top: 96px;
+    font-family: var(--sf-pro-rounded-bold);
+    font-size: 48px;
+    color: #272d31;
+
+    span {
+      color: #755cba;
+    }
+  }
+
+  .content {
+    max-width: 522px;
+
+    p {
+      font-size: 18px;
+      line-height: 1.5;
+      color: #272d31;
+      margin-top: 32px;
+    }
+  }
+
+  .buttons {
+    margin-top: 32px;
+    display: flex;
+    gap: 32px;
+  }
+}
