@@ -1,0 +1,94 @@
+@import "../../../Mixins.scss";
+
+.homeTransform {
+  padding-block: 96px;
+  max-width: 1543px;
+  margin-inline: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 32px;
+
+  @include mq(999) {
+    padding-block: 32px;
+    flex-direction: column-reverse;
+    gap: 0;
+  }
+
+  @include mq(700) {
+    padding-block: 20px;
+  }
+}
+
+.content {
+  max-width: 658px;
+
+  @include mq(999) {
+    max-width: initial;
+  }
+
+  p {
+    font-size: 18px;
+    line-height: 1.5;
+    color: #272d31;
+    margin-block: 32px;
+
+    @include mq(999) {
+      margin-block: 16px;
+    }
+
+    @include mq(700) {
+      font-size: 16px;
+    }
+  }
+}
+
+.superHeadline {
+  font-size: 32px;
+  line-height: 1.4;
+  font-weight: 400;
+  color: #637684;
+
+  @include mq(999) {
+    font-size: 24px;
+  }
+
+  @include mq(700) {
+    font-size: 18px;
+  }
+}
+
+.title {
+  font-family: var(--sf-pro-rounded-bold);
+  font-size: 48px;
+  color: #272d31;
+
+  @include mq(999) {
+    font-size: 32px;
+  }
+
+  @include mq(700) {
+    font-size: 24px;
+  }
+
+  span {
+    background: linear-gradient(to right, #d12a89, #288ed2);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+}
+
+.buttons {
+  margin-top: 32px;
+  display: flex;
+  gap: 32px;
+
+  @include mq(999) {
+    margin-top: 16px;
+  }
+
+  @include mq(700) {
+    gap: 16px;
+  }
+}

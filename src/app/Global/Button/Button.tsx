@@ -1,9 +1,8 @@
-import { forwardRef } from "react";
-import type { ButtonProps } from "./Button.types";
-import "./Button.scss";
+import { type ComponentProps, forwardRef } from "react";
+import styles from "./Button.module.scss";
 
-const Button = forwardRef<HTMLButtonElement, ButtonProps>(({ className, children, ...props }, ref) => {
-  const classNames = ["button"];
+const Button = forwardRef<HTMLButtonElement, ComponentProps<"button">>(({ className, children, ...props }, ref) => {
+  const classNames = [styles.button];
   if (className) classNames.push(className);
   const cls = classNames.join(" ");
 

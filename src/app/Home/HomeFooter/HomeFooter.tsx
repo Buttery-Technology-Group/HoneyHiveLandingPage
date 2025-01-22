@@ -1,26 +1,29 @@
+import { Button, Modal } from "../../Global";
+import { useModal } from "../../../hooks";
 import honey from "../../../assets/logos/honey.png";
 import melting from "../../../assets/images/melting-footer.svg";
-import { Button } from "../../Global/Button";
-import "./HomeFooter.scss";
-import useModal from "../../../hooks/useModal";
-import { Modal } from "../../Global/Modal";
+import styles from "./HomeFooter.module.scss";
 
 const HomeFooter = () => {
   const { modal, button } = useModal();
 
   return (
-    <div className="home-footer">
-      <div className="wrapper">
-        <img src={honey} alt="Honey" className="honey" />
-        <h1 className="title">
-          <span>Join</span> Honey today!
-        </h1>
-        <Button ref={button}>Join Waitlist</Button>
-        <Modal ref={modal} />
-      </div>
-      <img src={melting} alt="Melting" className="melting" />
-      <p className="copyright">© 2024 Buttery Technology Inc.</p>
-    </div>
+    <>
+      <footer className={styles.homeFooter}>
+        <div className={styles.wrapper}>
+          <img src={honey} alt="Honey" className={styles.honey} />
+          <h1 className={styles.title}>
+            <span>Join</span> Honey today!
+          </h1>
+          <Button className={styles.button} ref={button}>
+            Join Waitlist
+          </Button>
+        </div>
+        <img src={melting} alt="Melting" className={styles.melting} />
+        <p className={styles.copyright}>© 2024 Buttery Technology Inc.</p>
+      </footer>
+      <Modal ref={modal} />
+    </>
   );
 };
 

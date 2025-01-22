@@ -1,11 +1,11 @@
 import { forwardRef } from "react";
 import { Form } from "../Form";
-import "./Modal.scss";
+import styles from "./Modal.module.scss";
 
 const Modal = forwardRef<HTMLDivElement>((_props, ref) => (
-  <div className="modal-container" ref={ref}>
-    <div className="modal">
-      <h1 className="modal-title">Join Waitlist 🐝</h1>
+  <div className={styles.container} ref={ref}>
+    <div className={styles.modal}>
+      <h1 className={styles.title}>Join Waitlist</h1>
       <Form />
     </div>
   </div>

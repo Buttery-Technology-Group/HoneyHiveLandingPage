@@ -2,13 +2,17 @@
 
 .button {
   display: block;
-  margin-inline: auto;
   font-size: 18px;
   line-height: 1;
-  @include scaleAnimation;
   font-family: var(--sf-pro-rounded-bold);
   background-color: #288ed2;
   color: var(--white);
   border-radius: 99px;
   padding: 15px 40px;
+  @include scaleAnimation;
+
+  @include mq(700) {
+    font-size: 16px;
+    padding: 15px 32px;
+  }
 }

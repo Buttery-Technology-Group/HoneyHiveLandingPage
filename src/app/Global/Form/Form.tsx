@@ -1,10 +1,10 @@
 import { type FormEvent, useState } from "react";
+import { useForm } from "../../../hooks";
 import { Input } from "./Input";
 import { Button } from "./Button";
-import useForm from "../../../hooks/useForm";
 import { Loading } from "../Loading";
 import ArrowRight from "../../../assets/icons/arrow-right.svg?react";
-import "./Form.scss";
+import styles from "./Form.module.scss";
 
 const Form = () => {
   const [isLoading, setIsLoading] = useState(false);
@@ -26,7 +26,7 @@ const Form = () => {
   if (isLoading) return <Loading />;
 
   return (
-    <form className="form" onSubmit={handleSubmit}>
+    <form className={styles.form} onSubmit={handleSubmit}>
       <Input
         type="email"
         name="email"

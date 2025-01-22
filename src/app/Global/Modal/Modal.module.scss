@@ -1,6 +1,6 @@
 @import "../../../Mixins.scss";
 
-.modal-container {
+.container {
   height: 100dvh;
   width: 100%;
   background: rgba(0, 0, 0, 0.5);
@@ -10,9 +10,9 @@
   z-index: 3;
   display: none;
   place-items: center;
-  padding: 28px;
+  padding: 16px;
 
-  &.active {
+  &:global(.active) {
     display: grid;
 
     .modal {
@@ -22,13 +22,17 @@
 }
 
 .modal {
-  background: #ffd74d;
+  background: var(--white);
   width: 100%;
   max-width: 700px;
   padding: 80px;
   border-radius: 32px;
   position: relative;
   box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.32);
+
+  @include mq(700) {
+    padding: 40px;
+  }
 }
 
 @keyframes modal {
@@ -43,7 +47,7 @@
   }
 }
 
-.modal-title {
+.title {
   font-family: var(--sf-pro-rounded-bold);
   font-size: 24px;
   color: #393939;

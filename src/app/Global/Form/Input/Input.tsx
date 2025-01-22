@@ -1,12 +1,19 @@
 import type { ComponentProps } from "react";
-import "./Input.scss";
+import styles from "./Input.module.scss";
 
-type InputProps = ComponentProps<"input"> & {
+const Input = ({
+  type,
+  name,
+  placeholder,
+  value,
+  onChange,
+  onBlur,
+  error,
+  ...props
+}: ComponentProps<"input"> & {
   error: string | null;
-};
-
-const Input = ({ type, name, placeholder, value, onChange, onBlur, error }: InputProps) => (
-  <div className="input-wrapper">
+}) => (
+  <div className={styles.wrapper}>
     <input
       type={type}
       name={name}
@@ -15,9 +22,10 @@ const Input = ({ type, name, placeholder, value, onChange, onBlur, error }: Inpu
       value={value}
       onChange={onChange}
       onBlur={onBlur}
-      className="input"
+      className={styles.input}
+      {...props}
     />
-    {error && <p className="input-error">{error}</p>}
+    {error && <p className={styles.error}>{error}</p>}
   </div>
 );
 

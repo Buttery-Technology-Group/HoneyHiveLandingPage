@@ -1,12 +1,15 @@
-import { Link } from "react-router-dom";
-import type { LinkButtonProps } from "./LinkButton.types";
-import "./LinkButton.scss";
+import { type ComponentProps } from "react";
+import styles from "./LinkButton.module.scss";
 
-const LinkButton = ({ to, className, hasBackground = false, children }: LinkButtonProps) => {
+const LinkButton = ({ href, className, children, ...props }: ComponentProps<"a">) => {
+  const classNames = [styles.linkButton];
+  if (className) classNames.push(className);
+  const cls = classNames.join(" ");
+
   return (
-    <Link to={to} className={`${hasBackground ? "link-button-with-background" : "link-button"} ${className}`}>
+    <a href={href} target="_blank" className={cls} {...props}>
       {children}
-    </Link>
+    </a>
   );
 };
 

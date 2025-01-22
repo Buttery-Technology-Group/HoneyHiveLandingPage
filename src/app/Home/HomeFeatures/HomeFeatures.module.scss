@@ -1,0 +1,79 @@
+@import "../../../Mixins.scss";
+
+.homeFeatures {
+  padding-top: 96px;
+  padding-bottom: 240px;
+  max-width: 1543px;
+  margin-inline: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 32px;
+
+  @include mq(999) {
+    padding-block: 32px;
+    flex-direction: column-reverse;
+    gap: 16px;
+    padding-bottom: 0;
+  }
+
+  @include mq(700) {
+    padding-block: 20px;
+  }
+}
+
+.content {
+  flex: 1 0 728px;
+
+  @include mq(999) {
+    flex: initial;
+  }
+
+  p {
+    font-size: 18px;
+    line-height: 1.5;
+    color: #272d31;
+    margin-block: 32px;
+
+    @include mq(999) {
+      margin-block: 16px;
+    }
+
+    @include mq(700) {
+      font-size: 16px;
+    }
+  }
+}
+
+.superHeadline {
+  font-size: 32px;
+  line-height: 1.4;
+  font-weight: 400;
+  color: #637684;
+
+  @include mq(999) {
+    font-size: 24px;
+  }
+
+  @include mq(700) {
+    font-size: 18px;
+  }
+}
+
+.title {
+  font-family: var(--sf-pro-rounded-bold);
+  font-size: 48px;
+  color: #272d31;
+
+  @include mq(999) {
+    font-size: 32px;
+  }
+
+  @include mq(700) {
+    font-size: 24px;
+  }
+
+  span {
+    color: #0f9b81;
+  }
+}

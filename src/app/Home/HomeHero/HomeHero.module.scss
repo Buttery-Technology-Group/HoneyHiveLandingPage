@@ -1,0 +1,82 @@
+@import "../../../Mixins.scss";
+
+.homeHero {
+  max-width: 640px;
+  margin-inline: auto;
+  padding-top: 32px;
+  padding-bottom: 120px;
+
+  @include mq(999) {
+    padding-bottom: 32px;
+  }
+
+  @include mq(700) {
+    padding-bottom: 20px;
+  }
+}
+
+.honey {
+  margin-inline: auto;
+
+  @include mq(700) {
+    max-width: 50px;
+  }
+}
+
+.title {
+  font-family: var(--sf-pro-rounded-bold);
+  font-size: 75px;
+  line-height: 1.1333;
+  color: #272d31;
+  text-align: center;
+  margin-top: 32px;
+
+  @include mq(999) {
+    font-size: 48px;
+  }
+
+  @include mq(700) {
+    font-size: 32px;
+    margin-top: 16px;
+  }
+}
+
+.greenish {
+  background: linear-gradient(to right, #0f9b81, #288ed2);
+}
+
+.blueish {
+  background: linear-gradient(to right, #288ed2, #d12a89);
+}
+
+.greenish,
+.blueish {
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.intro {
+  font-size: 24px;
+  line-height: 1.4;
+  color: #576773;
+  margin-top: 32px;
+  margin-bottom: 48px;
+
+  @include mq(999) {
+    font-size: 18px;
+    text-align: center;
+    margin-top: 16px;
+    margin-bottom: 20px;
+  }
+
+  @include mq(700) {
+    font-size: 16px;
+    margin-top: 16px;
+    margin-bottom: 20px;
+  }
+}
+
+.button {
+  margin-inline: auto;
+}

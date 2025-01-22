@@ -1,0 +1,15 @@
+@import "../../../Mixins.scss";
+
+.linkButton {
+  display: inline-block;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1;
+  color: #288ed2;
+  padding: 16px;
+  @include scaleAnimation;
+
+  @include mq(700) {
+    font-size: 16px;
+  }
+}
