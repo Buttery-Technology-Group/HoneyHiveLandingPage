@@ -5,7 +5,7 @@ import { useForm } from "../../../hooks";
 import { Input } from "./Input";
 import { Button } from "./Button";
 import { Loading } from "../Loading";
-import ArrowRight from "../../../assets/icons/arrow-right.svg?react";
+import Arrow from "../../../assets/icons/arrow.svg?react";
 import styles from "./Form.module.scss";
 
 const Form = () => {
@@ -46,7 +46,7 @@ const Form = () => {
           error={error}
         />
         <Button type="submit" disabled={!isValid}>
-          <ArrowRight />
+          <Arrow />
         </Button>
       </form>
     </>
