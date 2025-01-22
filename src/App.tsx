@@ -6,9 +6,9 @@ import "./App.scss";
 
 const App = () => {
   return (
-    <BrowserRouter basename={"/<HoneyHiveLandingPage>/"}>
+    <BrowserRouter basename={"/HoneyHiveLandingPage/"}>
       <Routes>
-        <Route path="/" element={<Home />} />
+        <Route path="" element={<Home />} />
         <Route path="*" element={<p>404</p>} />
       </Routes>
     </BrowserRouter>
