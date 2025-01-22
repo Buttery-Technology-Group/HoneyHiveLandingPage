@@ -5,7 +5,6 @@ import styles from "./Modal.module.scss";
 const Modal = forwardRef<HTMLDivElement>((_props, ref) => (
   <div className={styles.container} ref={ref}>
     <div className={styles.modal}>
-      <h1 className={styles.title}>Join Waitlist</h1>
       <Form />
     </div>
   </div>
