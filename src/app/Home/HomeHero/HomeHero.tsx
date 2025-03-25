@@ -15,9 +15,9 @@ const HomeHero = () => {
           <span className={styles.blueish}>distributed AI</span> platform
         </h1>
         <p className={styles.intro}>
-          Build, grow, or integrate AI into your business with Honey so fast it’ll feel buttery smooth. Honey is the
+          Build, grow, or integrate AI into your business with Honey so fast it'll feel buttery smooth. Honey is the
           only platform for both online and enterprise customers where transparency, privacy, and trust are metrics you
-          can verify. Oh, and did we say it’s super fast? Yeah, it’s super fast.
+          can verify. Oh, and did we say it's super fast? Yeah, it's super fast.
         </p>
         <Button className={styles.button} ref={button}>
           Join Waitlist
