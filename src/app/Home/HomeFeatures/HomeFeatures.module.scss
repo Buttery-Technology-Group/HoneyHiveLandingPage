@@ -3,16 +3,16 @@
 .homeFeatures {
   padding-top: 96px;
   padding-bottom: 240px;
-  max-width: 1543px;
+  max-width: 1545px;
   margin-inline: auto;
-  display: flex;
+  display: grid;
+  grid-template-columns: 0.6fr 1fr;
   align-items: center;
-  justify-content: space-between;
   gap: 32px;
 
   @include mq(999) {
     padding-block: 32px;
-    flex-direction: column-reverse;
+    grid-template-columns: 1fr;
     gap: 16px;
     padding-bottom: 0;
   }
@@ -23,10 +23,8 @@
 }
 
 .content {
-  flex: 1 0 728px;
-
   @include mq(999) {
-    flex: initial;
+    order: 2;
   }
 
   p {
